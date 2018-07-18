@@ -3,7 +3,6 @@ services:
   mysql:
     environment:
       - MYSQL_ALLOW_EMPTY_PASSWORD=1
-      - MYSQL_DATABASE=exercism_reboot_development
       - MYSQL_USER=exercism_reboot
       - MYSQL_PASSWORD=exercism_reboot
     image: "mariadb:10.3"
@@ -11,6 +10,8 @@ services:
     command:
       - "--character-set-server=utf8mb4"
       - "--collation-server=utf8mb4_unicode_ci"
+    volumes:
+      - ./setup/mysql:/docker-entrypoint-initdb.d
   rails:
 # Use the prebuilt image
     image: "unused/exercism_rails"

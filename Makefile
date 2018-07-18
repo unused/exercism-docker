@@ -22,7 +22,10 @@ init:
 run:
 	docker-compose -p $(PROJECT) up
 
+test:
+	docker-compose -p $(PROJECT) exec rails bin/rails test
+
 clean:
 	docker-compose -p $(PROJECT) down && docker rmi $(PROJECT)_rails
 
-.PHONY: all setup build init run clean
+.PHONY: all setup build init run test clean
