@@ -1,5 +1,7 @@
 version: '3'
 services:
+  redis:
+    image: "redis:4"
   mysql:
     environment:
       - MYSQL_ALLOW_EMPTY_PASSWORD=1
@@ -21,7 +23,9 @@ services:
       - ./website/:/opt/rails
     environment:
       MYSQL_HOST: 'mysql'
+      REDIS_URL: 'redis://redis:6379/1'
     depends_on:
       - mysql
+      - redis
     ports:
       - "3000:3000/tcp"
