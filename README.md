@@ -32,7 +32,6 @@ $ docker-compose -p exercism down # Remove local environment
 $ docker rmi exercism_rails # Cleanup build docker image
 ```
 
-
 ## Setup without using Docker
 
 To setup a local development environment you'll have either to prepare your
@@ -47,6 +46,7 @@ will provide you with all background information needed.
 $ git remote add origin git@github.com:<your-github-username>/website.git
 $ git checkout -b <short-descriptive-branch-name> # create a new branch
 # ... do some changes
+$ make test # check tests
 $ git push origin <short-descriptive-branch-name> # push your changes
 ```
 
