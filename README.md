@@ -69,5 +69,5 @@ docker-compose.yml and add the selinux-flag `./workspace/:/opt/rails/:Z`.
 [Docker]: https://www.docker.com/what-docker "What is Docker?"
 [docker-compose]: https://docs.docker.com/compose/ "Docker Compose"
 [project]: https://github.com/exercism/website "Exercism Website on GitHub"
-[webiste]: https://exercism.io/ "Exercism Website"
+[website]: https://exercism.io/ "Exercism Website"
 [dockerhub]: https://hub.docker.com/r/unused/exercism_rails/
