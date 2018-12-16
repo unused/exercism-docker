@@ -1,4 +1,4 @@
-FROM ruby:2.5
+FROM ruby:2.4
 
 # Specify warking directoy
 WORKDIR /opt/rails
