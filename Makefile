@@ -19,8 +19,14 @@ push:
 init:
 	docker-compose -p $(PROJECT) exec rails bin/rails exercism:setup
 
+migrate:
+	docker-compose -p $(PROJECT) exec rails bin/rails db:migrate
+
 run:
 	docker-compose -p $(PROJECT) up
+
+bash:
+	docker-compose -p $(PROJECT) exec rails bash
 
 test:
 	docker-compose -p $(PROJECT) exec rails bin/rails test
