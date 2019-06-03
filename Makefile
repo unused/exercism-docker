@@ -1,6 +1,5 @@
 
 IMG_PREFIX=unused
-PROJECT=exercism
 
 all: website website/server_identity run
 
@@ -17,21 +16,21 @@ push:
 	docker push $(IMG_PREFIX)/$(PROJECT)_rails
 
 init:
-	docker-compose -p $(PROJECT) exec rails bin/rails exercism:setup
+	docker-compose exec rails bin/rails exercism:setup
 
 migrate:
-	docker-compose -p $(PROJECT) exec rails bin/rails db:migrate
+	docker-compose exec rails bin/rails db:migrate
 
 run:
-	docker-compose -p $(PROJECT) up
+	docker-compose up
 
 bash:
-	docker-compose -p $(PROJECT) exec rails bash
+	docker-compose exec rails bash
 
 test:
-	docker-compose -p $(PROJECT) exec rails bin/rails test
+	docker-compose exec rails bin/rails test
 
 clean:
-	docker-compose -p $(PROJECT) down && docker rmi $(PROJECT)_rails
+	docker-compose down && docker rmi $(PROJECT)_rails
 
 .PHONY: all setup build init run test clean

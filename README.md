@@ -25,10 +25,10 @@ troubles please feel free to open an issue.
 
 ```
 $ echo "host" > server_identity # Set server identity file
-$ docker-compose -p exercism up # Start the local development environment
-$ docker-compose -p exercism exec rails bin/rails exercism:setup # Setup database and git repos
+$ docker-compose up # Start the local development environment
+$ docker-compose exec rails bin/rails exercism:setup # Setup database and git repos
 
-$ docker-compose -p exercism down # Remove local environment
+$ docker-compose down # Remove local environment
 $ docker rmi exercism_rails # Cleanup build docker image
 ```
 
