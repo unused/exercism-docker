@@ -1,6 +1,8 @@
 
 IMG_PREFIX=unused
 
+PROJECT=exercism
+
 all: website website/server_identity run
 
 website:
