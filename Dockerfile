@@ -25,6 +25,7 @@ RUN curl -sS 'https://deb.nodesource.com/gpgkey/nodesource.gpg.key' | apt-key ad
 RUN apt-get update && apt-get install -y yarn nodejs cmake
 
 # Install ruby libraries
+RUN gem update bundler
 RUN bundle install
 
 # Install JavaScript libraries
