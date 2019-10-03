@@ -34,4 +34,4 @@ RUN bundle exec rake bin/setup
 EXPOSE 3000
 
 # Run the development server
-CMD ["bin/rails", "server"]
+CMD ["bin/rails", "server", "--binding=0.0.0.0"]
