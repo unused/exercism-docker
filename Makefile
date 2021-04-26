@@ -6,7 +6,7 @@ PROJECT=exercism
 all: website website/server_identity run
 
 website:
-	git clone --origin upstream --branch master git@github.com:exercism/website.git
+	git clone --origin upstream --branch master git@github.com:exercism/v2-website.git website
 
 website/server_identity: website
 	echo "host" > website/server_identity
